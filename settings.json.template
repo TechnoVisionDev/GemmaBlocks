@@ -20,7 +20,7 @@
     // port: The port # that MongoDB is configured to listen for requests on (default: 27017)
     "port": 27017
   },
-  
+
   // wallet: a collection of settings that allow the explorer to connect to the coin wallet
   "wallet": {
     // host: The hostname or ip address of the wallet to connect to (default: localhost)
@@ -37,7 +37,7 @@
   "webserver": {
     // port: Port # to configure the express webserver to listen for http requests on
     //       NOTE: Be sure to configure firewalls to allow traffic through this port or the explorer website may not be accessible remotely
-    "port": 3000,
+    "port": 3001,
     // tls: a collection of settings that pertain to the TLS (Transport Layer Security) protocol feature (aka: ssl or https)
     "tls": {
       // enabled: Enable/disable TLS
@@ -52,11 +52,11 @@
       //                  If set to false, the webserver will allow both http and https traffic
       "always_redirect": true,
       // cert_file: The absolute or relative path to the tls certificate file. Typically this file will be generated from certbot (read more: https://certbot.eff.org)
-      "cert_file": "/etc/letsencrypt/live/explorer.gemmacoin.io/cert.pem",
+      "cert_file": "/etc/letsencrypt/live/domain-name-here/cert.pem",
       // chain_file: The absolute or relative path to the tls chain file. Typically this file will be generated from certbot (read more: https://certbot.eff.org)
-      "chain_file": "/etc/letsencrypt/live/explorer.gemmacoin.io/chain.pem",
+      "chain_file": "/etc/letsencrypt/live/domain-name-here/chain.pem",
       // key_file: The absolute or relative path to the tls private key file. Typically this file will be generated from certbot (read more: https://certbot.eff.org)
-      "key_file": "/etc/letsencrypt/live/explorer.gemmacoin.io/privkey.pem"
+      "key_file": "/etc/letsencrypt/live/domain-name-here/privkey.pem"
     },
     // cors: a collection of settings that pertain to the cors feature
     //       Cross-Origin Resource Sharing (CORS) support (read more: https://www.maxcdn.com/one/visual-glossary/cors/)
@@ -77,9 +77,9 @@
   "coin": {
     // name: Name of the cryptocurrency coin being explored. This value is displayed in the page header when the "shared_pages.page_header.home_link" setting is set to "coin".
     //       NOTE: This value acts as a unique identifier for data stored in mongo and therefore cannot be changed without re-syncing all existing data.
-    "name": "Gemma",
+    "name": "Flopcoin",
     // symbol: The cryptocurrency coin ticker/symbol value. This value is displayed anywhere that coin data is displayed including the index, address, block, movement, reward, richlist/top100 and tx pages
-    "symbol": "GEMS"
+    "symbol": "FLOP"
   },
 
   // network_history: a collection of settings that controls saving of extra historical network data during a block sync
@@ -102,7 +102,7 @@
     //        (see /public/css/themes for available themes)
     "theme": "Slate",
     // page_title: The text to display at the end of the HTML title tag and also displayed in the page header when the "shared_pages.page_header.home_link" setting is set to "title"
-    "page_title": "Gemma",
+    "page_title": "Flopcoin",
     // favicons: a collection of image or icon files that are displayed in a browser window/tab and serve as branding for your website. Their main purpose is to help visitors locate your page easier when they have multiple tabs open
     //          Modern favicon sizes were inspired by this web article: https://www.emergeinteractive.com/insights/detail/The-Essentials-of-FavIcons/
     //          NOTE: If any of the favicons are left blank or not set to a valid file, they will be disabled and unused
@@ -575,7 +575,7 @@
           // tooltip_text: Social link tooltips are always prefixed by the "coin.name" setting followed by the text from this tooltip_text setting. Ex: Exor Github
           "tooltip_text": "Github",
           // url: The exact url that the social link should navigate to
-          "url": "https://github.com/Gemma/Gemma-Core",
+          "url": "https://github.com/Flopcoin/Flopcoin",
           // fontawesome_class: A string of css classes, separated by spaces that can be used to display a fontawesome icon for this social link. See https://fontawesome.com/ for more info
           "fontawesome_class": "fa-brands fa-github",
           // image_path: The path to an image file that will be displayed for this social link
@@ -589,7 +589,7 @@
           // tooltip_text: Social link tooltips are always prefixed by the "coin.name" setting followed by the text from this tooltip_text setting. Ex: Exor Twitter
           "tooltip_text": "Twitter",
           // url: The exact url that the social link should navigate to
-          "url": "https://twitter.com/gemma",
+          "url": "https://twitter.com/flopcoin_dev",
           // fontawesome_class: A string of css classes, separated by spaces that can be used to display a fontawesome icon for this social link. See https://fontawesome.com/ for more info
           "fontawesome_class": "fa-brands fa-twitter",
           // image_path: The path to an image file that will be displayed for this social link
@@ -603,7 +603,7 @@
           // tooltip_text: Social link tooltips are always prefixed by the "coin.name" setting followed by the text from this tooltip_text setting. Ex: Exor Discord
           "tooltip_text": "Discord",
           // url: The exact url that the social link should navigate to
-          "url": "https://discord.gg/hpbMxBTDAb",
+          "url": "https://discord.com/invite/8qJqXQaczJ",
           // fontawesome_class: A string of css classes, separated by spaces that can be used to display a fontawesome icon for this social link. See https://fontawesome.com/ for more info
           "fontawesome_class": "fa-brands fa-discord",
           // image_path: The path to an image file that will be displayed for this social link
@@ -617,7 +617,7 @@
           // tooltip_text: Social link tooltips are always prefixed by the "coin.name" setting followed by the text from this tooltip_text setting. Ex: Exor Telegram
           "tooltip_text": "Telegram",
           // url: The exact url that the social link should navigate to
-          "url": "https://t.me/gemma",
+          "url": "https://t.me/flopcoin",
           // fontawesome_class: A string of css classes, separated by spaces that can be used to display a fontawesome icon for this social link. See https://fontawesome.com/ for more info
           "fontawesome_class": "fa-brands fa-telegram",
           // image_path: The path to an image file that will be displayed for this social link
@@ -631,7 +631,7 @@
           // tooltip_text: Social link tooltips are always prefixed by the "coin.name" setting followed by the text from this tooltip_text setting. Ex: Exor Website
           "tooltip_text": "Website",
           // url: The exact url that the social link should navigate to
-          "url": "https://gemma.io",
+          "url": "https://flopcoin.net",
           // fontawesome_class: A string of css classes, separated by spaces that can be used to display a fontawesome icon for this social link. See https://fontawesome.com/ for more info
           "fontawesome_class": "",
           // image_path: The path to an image file that will be displayed for this social link
@@ -645,7 +645,7 @@
           // tooltip_text: Social link tooltips are always prefixed by the "coin.name" setting followed by the text from this tooltip_text setting. Ex: Exor Coingecko
           "tooltip_text": "Coingecko",
           // url: The exact url that the social link should navigate to
-          "url": "https://www.coingecko.com/en/coins/gems",
+          "url": "https://www.coingecko.com/en/coins/flop",
           // fontawesome_class: A string of css classes, separated by spaces that can be used to display a fontawesome icon for this social link. See https://fontawesome.com/ for more info
           "fontawesome_class": "",
           // image_path: The path to an image file that will be displayed for this social link
@@ -666,7 +666,7 @@
       "social_link_percent_height_mobile": 40,
       // powered_by_text: Customize the "powered by" text in the center of the footer with some custom html
       //                  NOTE: Add the keyword {explorer_version} to display the current version number of the explorer
-      "powered_by_text": "<a class='nav-link poweredby' href='https://github.com/Gemma/Gemma-Core' target='_blank'>eIquidus v{explorer_version}</a>"
+      "powered_by_text": "<a class='nav-link poweredby' href='https://github.com/Flopcoin/Flopcoin' target='_blank'>eIquidus v{explorer_version}</a>"
     }
   },
 
@@ -1072,7 +1072,7 @@
         //                You can add as many trading pairs as necessary
         //                All entries must specify your coins symbol as it is displayed on the exchange, followed by a slash (/) and ending with the symbol of the market or asset that is being traded against
         //                Ex: "LTC/BTC", "LTC/USDT", "LTC/ETH"
-        "trading_pairs": [ "GEMS/USDT" ]
+        "trading_pairs": [ "FLOP/USDT" ]
       },
       // dextrade: a collection of settings that pertain to the dex-trade exchange
       "dextrade": {
@@ -1083,7 +1083,7 @@
         //                You can add as many trading pairs as necessary
         //                All entries must specify your coins symbol as it is displayed on the exchange, followed by a slash (/) and ending with the symbol of the market or asset that is being traded against
         //                Ex: "LTC/BTC", "LTC/USDT", "LTC/ETH"
-        "trading_pairs": [ "GEMS/USDT" ]
+        "trading_pairs": [ "FLOP/USDT" ]
       },
       // freiexchange: a collection of settings that pertain to the freiexchange/freixlite exchange
       //               NOTE: freiexchange does not display a 24-hour chart due to a lack of OHLCV api data
@@ -1095,7 +1095,7 @@
         //                You can add as many trading pairs as necessary
         //                All entries must specify your coins symbol as it is displayed on the exchange, followed by a slash (/) and ending with the symbol of the market or asset that is being traded against
         //                Ex: "LTC/BTC", "LTC/USDT", "LTC/ETH"
-        "trading_pairs": [ "GEMS/USDT" ]
+        "trading_pairs": [ "FLOP/USDT" ]
       },
       // nonkyc: a collection of settings that pertain to the nonkyc exchange
       "nonkyc": {
@@ -1106,7 +1106,7 @@
         //                You can add as many trading pairs as necessary
         //                All entries must specify your coins symbol as it is displayed on the exchange, followed by a slash (/) and ending with the symbol of the market or asset that is being traded against
         //                Ex: "LTC/BTC", "LTC/USDT", "LTC/ETH"
-        "trading_pairs": [ "GEMS/USDT" ]
+        "trading_pairs": [ "FLOP/USDT" ]
       },
       // poloniex: a collection of settings that pertain to the poloniex exchange
       "poloniex": {
@@ -1117,7 +1117,7 @@
         //                You can add as many trading pairs as necessary
         //                All entries must specify your coins symbol as it is displayed on the exchange, followed by a slash (/) and ending with the symbol of the market or asset that is being traded against
         //                Ex: "LTC/BTC", "LTC/USDT", "LTC/ETH"
-        "trading_pairs": [ "GEMS/USDT" ]
+        "trading_pairs": [ "FLOP/USDT" ]
       },
       // xeggex: a collection of settings that pertain to the xeggex exchange
       "xeggex": {
@@ -1128,7 +1128,7 @@
         //                You can add as many trading pairs as necessary
         //                All entries must specify your coins symbol as it is displayed on the exchange, followed by a slash (/) and ending with the symbol of the market or asset that is being traded against
         //                Ex: "LTC/BTC", "LTC/USDT", "LTC/ETH"
-        "trading_pairs": [ "GEMS/USDT" ]
+        "trading_pairs": [ "FLOP/USDT" ]
       },
       // yobit: a collection of settings that pertain to the yobit exchange
       //        NOTE: yobit does not display a 24-hour chart due to a lack of OHLCV api data
@@ -1140,7 +1140,7 @@
         //                You can add as many trading pairs as necessary
         //                All entries must specify your coins symbol as it is displayed on the exchange, followed by a slash (/) and ending with the symbol of the market or asset that is being traded against
         //                Ex: "LTC/BTC", "LTC/USDT", "LTC/ETH"
-        "trading_pairs": [ "GEMS/USDT" ]
+        "trading_pairs": [ "FLOP/USDT" ]
       }
     },
     // market_price: Determine how to calculate the market price
@@ -1168,7 +1168,7 @@
       //                See the list of supported exchanges above for the list of supported exchange names
       "exchange_name": "xeggex",
       // trading_pair: The name of the trading pair for the default exchange must exactly match the name of a trading pair from the "exchanges" setting above
-      "trading_pair": "GEMS/USDT"
+      "trading_pair": "FLOP/USDT"
     }
   },
 
